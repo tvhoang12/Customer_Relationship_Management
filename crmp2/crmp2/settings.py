@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_filters',
     'drf_spectacular',
+    'dj_rest_auth',
     #app
     'crm_app',
 ]
@@ -117,6 +118,8 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
+# SITE_ID = 1
 
 
 # Static files (CSS, JavaScript, Images)
