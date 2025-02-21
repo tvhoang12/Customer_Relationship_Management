@@ -39,8 +39,7 @@ class Task(models.Model):
     status = models.CharField(max_length=50, choices=STATUS_CHOICES, default='To Do')
     assigned_to = models.ForeignKey(Employee, on_delete=models.SET_NULL, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
-    # customer = models.ForeignKey(User, on_delete=models.SET_NULL, null = True)
-    # employee = models.ForeignKey(User, on_delete=models.SET_NULL, null= True)
+    customer = models.ForeignKey(Customer, on_delete=models.CASCADE, related_name='tasks')
 
     def __str__(self):
         return self.title

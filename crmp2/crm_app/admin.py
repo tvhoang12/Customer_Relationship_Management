@@ -11,8 +11,8 @@ class CustomerAdmin(admin.ModelAdmin):
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     list_display = ('name', 'price', 'description', 'stock')
-    search_fields = ('name', 'price')
-    list_filter = ('stock','description')
+    search_fields = ('name', 'decription')
+    list_filter = ('stock','price')
 
 @admin.register(Employee)
 class EmployeeAdmin(admin.ModelAdmin):
@@ -22,6 +22,6 @@ class EmployeeAdmin(admin.ModelAdmin):
 
 @admin.register(Task)
 class TaskAdmin(admin.ModelAdmin):
-    list_display = ('title', 'assigned_to', 'status', 'created_at', 'description')
+    list_display = ('title', 'assigned_to', 'status', 'created_at', 'description', 'customer')
     search_fields = ('title', 'assigned_to__name', 'description')
     list_filter = ('status',  ('created_at', DateFieldListFilter))
