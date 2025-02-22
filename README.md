@@ -26,8 +26,8 @@ make a CRM application with Django
 
 1. Clone the repository:
 ```bash
-git clone [repository-url]
-cd [repository-name]
+git clone https://github.com/tvhoang12/Customer_Relationship_Management.git
+cd Customer_Relationship_Management
 ```
 
 2. Create and activate a virtual environment:
@@ -43,18 +43,18 @@ pip install -r requirements.txt
 
 4. Run migrations:
 ```bash
-python manage.py makemigrations
-python manage.py migrate
+python crmp2/crmp2/manage.py makemigrations
+python crmp2/crmp2/manage.py migrate
 ```
 
 5. Create a superuser:
 ```bash
-python manage.py createsuperuser
+python crmp2/manage.py createsuperuser
 ```
 
 6. Run the development server:
 ```bash
-python manage.py runserver
+python crmp2/manage.py runserver
 ```
 
 ### Authentication
@@ -149,12 +149,12 @@ The admin interface provides:
 
 To run tests:
 ```bash
-python manage.py test
+python crmp2/manage.py test
 ```
 
 To generate schema:
 ```bash
-python manage.py spectacular --file schema.yml
+python crmp2/manage.py spectacular --file schema.yml
 ```
 
 ## License
