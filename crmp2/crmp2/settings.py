@@ -88,6 +88,12 @@ DATABASES = {
     }
 }
 
+# CSRF_TRUSTED_ORIGINS = [
+#     'http://172.200.234.169:8000',  # Thêm địa chỉ IP của bạn
+#     'http://localhost:8000',        # Nếu bạn đang chạy local
+# ]
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -138,5 +144,6 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.BasicAuthentication',
         'rest_framework.authentication.SessionAuthentication',
-    ]
+    ],
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
