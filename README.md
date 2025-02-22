@@ -43,8 +43,8 @@ pip install -r requirements.txt
 
 4. Run migrations:
 ```bash
-python crmp2/crmp2/manage.py makemigrations
-python crmp2/crmp2/manage.py migrate
+python crmp2/manage.py makemigrations
+python crmp2/manage.py migrate
 ```
 
 5. Create a superuser:
